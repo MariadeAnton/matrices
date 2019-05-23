@@ -27,11 +27,10 @@ env:
       - TASK=coverage:vault
       - TASK=coverage:voting
       - TASK=coverage:payroll
-    stage: allowed failures
-      allow_failures:
-        - env: TASK=coverage:agent
-        - env: TASK=coverage:finance
-        - env: TASK=coverage:payroll
+    allow_failures:
+      - env: TASK=coverage:agent
+      - env: TASK=coverage:finance
+      - env: TASK=coverage:payroll
 install:
   - echo true
 before_script:
