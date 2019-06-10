@@ -4,3 +4,5 @@ dist: xenial
 addons:
   snaps:
     - hugo
+
+script: snap list
