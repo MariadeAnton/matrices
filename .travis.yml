@@ -7,5 +7,6 @@ addons:
     - name: aws-cli
       confinement: classic # or devmode
       channel: latest
+    - name: go
 
-script: snap list
+script: echo Hola Snaps
