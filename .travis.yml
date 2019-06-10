@@ -3,6 +3,9 @@ language: generic
 dist: xenial
 addons:
   snaps:
-    - hugo
+    - name: hugo
+    - name: aws-cli
+      confinement: classic # or devmode
+      channel: latest
 
 script: snap list
