@@ -9,4 +9,11 @@ addons:
       channel: latest
     - name: go
 
-script: echo Hola Snaps
+jobs:
+  include:
+    - stage: test
+      script: echo first
+    - # stage name not required, will continue to use `test`
+      script: echo second
+    - stage: deploy
+      script: echo final
