@@ -4,10 +4,6 @@ dist: xenial
 addons:
   snaps:
     - name: hugo
-    - name: aws-cli
-      confinement: classic # or devmode
-      channel: latest
-    - name: go
 
 jobs:
   include:
