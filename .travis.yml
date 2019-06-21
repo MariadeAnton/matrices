@@ -15,5 +15,16 @@ jobs:
       script: echo first
     - # stage name not required, will continue to use `test`
       script: echo second
+    - stage: extra
+      dist: bionic
+      script: echo hi
     - stage: deploy
+      git:
+        clone: false
       script: echo final
+      rvm: 
+         - 2.3
+      addons:
+        snaps: 
+         - hugo
+         - aws-cli
